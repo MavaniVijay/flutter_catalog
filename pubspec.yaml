@@ -72,6 +72,16 @@ flutter:
     - lib/all_widgets/navigation/
     - lib/all_widgets/async/
     - lib/all_widgets/animation/
+#   /// Advanced All Widget ///
+    - lib/all_widgets/animationAdvanced/
+    - lib/all_widgets/multiMedia/
+    - lib/all_widgets/persistence/
+    - lib/all_widgets/stateManagement/
+    - lib/all_widgets/plugins/
+    - lib/all_widgets/chart/
+    - lib/all_widgets/networking/
+    - lib/all_widgets/firebase/
+
     - packages/flutter_gallery_assets/animated_images/animated_flutter_stickers.webp
 
   # An image asset can refer to one or more resolution-specific "variants", see

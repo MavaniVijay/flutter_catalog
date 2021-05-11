@@ -4,6 +4,7 @@ import 'package:flutter_catalogs/all_widgets/animation/animated_icon_widget.dart
 import 'package:flutter_catalogs/all_widgets/animation/animation_package_widget.dart';
 import 'package:flutter_catalogs/all_widgets/animation/hero_widget.dart';
 import 'package:flutter_catalogs/all_widgets/animation/opacity_widget.dart';
+import 'package:flutter_catalogs/all_widgets/animationAdvanced/low_level_animation_widget.dart';
 import 'package:flutter_catalogs/all_widgets/appbar/backdrop_widget.dart';
 import 'package:flutter_catalogs/all_widgets/appbar/basic_appbar_widget.dart';
 import 'package:flutter_catalogs/all_widgets/appbar/bottom_appbar_widget.dart';
@@ -303,13 +304,229 @@ List<WidgetBoxModel> kListAnimation = [
     color: Color(0xff757575),
   ),
   WidgetBoxModel(
-    title: "Animation Package",
+    title: "Animated Icon",
     color: Color(0xff9e9e9e),
   ),
+  WidgetBoxModel(
+    title: "Animation Package",
+    color: Color(0xffbdbdbd),
+  ),
+];
+
+/// Advanced Tab List Container ///
+List<HomeCardModel> advancedContainerList = [
+  HomeCardModel(
+      title: "Animation (advanced)",
+      color: Color(0xffffb74d),
+      icon: Icons.animation,
+      listWidget: advancedAnimation),
+  HomeCardModel(
+      title: "MultiMedia",
+      color: Color(0xff64b5f6),
+      icon: Icons.mms,
+      listWidget: advancedMultiMedia),
+  HomeCardModel(
+      title: "Persistence",
+      color: Color(0xff9575cd),
+      icon: Icons.sd_card,
+      listWidget: advancedPersistence),
+  HomeCardModel(
+      title: "State Management",
+      color: Color(0xff4db6ac),
+      icon: Icons.code_sharp,
+      listWidget: advancedStateManagement),
+  HomeCardModel(
+      title: "Plugins",
+      color: Color(0xff81c784),
+      icon: Icons.power_rounded,
+      listWidget: advancedPlugins),
+  HomeCardModel(
+      title: "Charts",
+      color: Color(0xff90a4ae),
+      icon: Icons.bubble_chart_outlined,
+      listWidget: advancedChart),
+  HomeCardModel(
+      title: "Networking",
+      color: Color(0xffdce775),
+      icon: Icons.http_sharp,
+      listWidget: advancedNetwork),
+  HomeCardModel(
+      title: "FireBase",
+      color: Color(0xffa1887f),
+      icon: Icons.cloud_circle_rounded,
+      listWidget: advancedFirebase),
+];
+
+List<WidgetBoxModel> advancedAnimation = [
+  WidgetBoxModel(
+    title: "Low Level Animation",
+    color: Color(0xffef6c00),
+  ),
+  WidgetBoxModel(
+    title: "Animated Widget",
+    color: Color(0xfff57c00),
+  ),
+  WidgetBoxModel(
+    title: "Animated Builder",
+    color: Color(0xfffb8c00),
+  ),
+  WidgetBoxModel(
+    title: "Lottie",
+    color: Color(0xffff9800),
+  )
+];
+List<WidgetBoxModel> advancedMultiMedia = [
+  WidgetBoxModel(
+    title: "Image Picker",
+    color: Color(0xff039be5),
+  ),
+  WidgetBoxModel(
+    title: "Extend Image",
+    color: Color(0xff03a9f4),
+  ),
+  WidgetBoxModel(
+    title: "Video Player",
+    color: Color(0xff29b6f6),
+  ),
+];
+
+List<WidgetBoxModel> advancedPersistence = [
+  WidgetBoxModel(
+    title: "Shared Preference",
+    color: Color(0xff673ab7),
+  ),
+  WidgetBoxModel(
+    title: "Local File Read/Write",
+    color: Color(0xff7e57c2),
+  ),
+  WidgetBoxModel(
+    title: "SqLite",
+    color: Color(0xff9575cd),
+  ),
+  WidgetBoxModel(
+    title: "SemBast",
+    color: Color(0xffb39ddb),
+  ),
+  WidgetBoxModel(
+    title: "Hive",
+    color: Color(0xffd1c4e9),
+  ),
+];
+
+List<WidgetBoxModel> advancedStateManagement = [
+  WidgetBoxModel(
+    title: "Inherited Widget",
+    color: Color(0xff00695c),
+  ),
+  WidgetBoxModel(
+    title: "Scoped Mode",
+    color: Color(0xff00796b),
+  ),
+  WidgetBoxModel(
+    title: "Vanilla BLoC Pattern",
+    color: Color(0xff00897b),
+  ),
+  WidgetBoxModel(
+    title: "Flutter BLoC",
+    color: Color(0xff009688),
+  ),
+  WidgetBoxModel(
+    title: "Provider",
+    color: Color(0xff26a69a),
+  ),
+];
+
+List<WidgetBoxModel> advancedPlugins = [
+  WidgetBoxModel(
+    title: "Web View",
+    color: Color(0xff558b2f),
+  ),
+  WidgetBoxModel(
+    title: "Mark Down Rendering",
+    color: Color(0xff689f38),
+  ),
+  WidgetBoxModel(
+    title: "Local Auth",
+    color: Color(0xff7cb342),
+  ),
+];
+
+List<WidgetBoxModel> advancedChart = [
+  WidgetBoxModel(
+    title: "Time Series Chart",
+    color: Color(0xff263238),
+  ),
+  WidgetBoxModel(
+    title: "Pie Chart",
+    color: Color(0xff37474f),
+  ),
+  WidgetBoxModel(
+    title: "Line Chart",
+    color: Color(0xff455a64),
+  ),
+  WidgetBoxModel(
+    title: "Bar Chat",
+    color: Color(0xff546e7a),
+  ),
+  WidgetBoxModel(
+    title: "Pie Chart With Fl Chart",
+    color: Color(0xff607d8b),
+  ),
+  WidgetBoxModel(
+    title: "GraphView",
+    color: Color(0xff78909c),
+  ),
+  WidgetBoxModel(
+    title: "HetMap Calender",
+    color: Color(0xff90a4ae),
+  ),
+  WidgetBoxModel(
+    title: "Radar Chart",
+    color: Color(0xffb0bec5),
+  ),
+];
+
+List<WidgetBoxModel> advancedNetwork = [
+  WidgetBoxModel(
+    title: "Fetching Data",
+    color: Color(0xffc0ca33),
+  ),
+  WidgetBoxModel(
+    title: "Sending Data",
+    color: Color(0xffcddc39),
+  ),
+  WidgetBoxModel(
+    title: "Hacker News",
+    color: Color(0xffd4e157),
+  ),
+  WidgetBoxModel(
+    title: "Google Books",
+    color: Color(0xffdce775),
+  )
+];
+
+List<WidgetBoxModel> advancedFirebase = [
+  WidgetBoxModel(
+    title: "Firebase Login",
+    color: Color(0xff4e342e),
+  ),
+  WidgetBoxModel(
+    title: "FireStore Voting App",
+    color: Color(0xff5d4037),
+  ),
+  WidgetBoxModel(
+    title: "Chat Room",
+    color: Color(0xff6d4c41),
+  ),
+  WidgetBoxModel(
+    title: "FireBase ML Kit",
+    color: Color(0xff795548),
+  )
 ];
 
 /// collectionListWidget...
 List<String> kCollectionListWidget = [
+  /// basic widgets list ///
   "Icon",
   "Text",
   "TextFiled",
@@ -356,6 +573,44 @@ List<String> kCollectionListWidget = [
   "Opacity",
   "Animated Container",
   "Animation Package",
+
+  /// Advance Widget List Search ///
+  "Low Level Animation",
+  "Animated Widget",
+  "Animated Builder",
+  "Lottie",
+  "Image Picker",
+  "Video Player",
+  "Extend Image",
+  "Shared Preference",
+  "Local File Read/Write",
+  "SqLite",
+  "SemBast",
+  "Hive",
+  "Inherited Widget",
+  "Scoped Mode",
+  "Vanilla BLoC Pattern",
+  "Flutter BLoC",
+  "Provider",
+  "Web View",
+  "Mark Down Rendering",
+  "Local Auth",
+  "Time Series Chart",
+  "Pie Chart",
+  "Line Chart",
+  "Bar Chat",
+  "Pie Chart With Fl Chart",
+  "GraphView",
+  "HetMap Calender",
+  "Radar Chart",
+  "Fetching Data",
+  "Sending Data",
+  "Hacker News",
+  "Google Books",
+  "Firebase Login",
+  "FireStore Voting App",
+  "Chat Room",
+  "FireBase ML Kit",
 ];
 
 /// preview screen dart path...
@@ -368,6 +623,16 @@ const String appbarPath = "appbar/";
 const String navigationPath = "navigation/";
 const String asyncPath = "async/";
 const String animationPath = "animation/";
+
+//// advacned widget path ///
+const String advancedPath = "animationAdvanced/";
+const String multiMediaPath = "multiMedia/";
+const String persistencePath = "persistence/";
+const String stateManagePath = "stateManagement/";
+const String pluginsPath = "plugins/";
+const String chartPath = "chart/";
+const String networkingPath = "networking/";
+const String fireBasePath = "firebase/";
 
 const Map<String, String> kWidgetList = {
   /// Widget Container ////
@@ -438,6 +703,13 @@ const Map<String, String> kWidgetList = {
       "${basePath}${animationPath}animated_container_widget.dart",
   'Animation Package':
       "${basePath}${animationPath}animation_package_widget.dart",
+
+  ///////  ***************************************************** /////////
+  ///      Advanced Flutter Path ///
+
+  /// Animation Advanced ///
+  'Low Level Animation':
+      "${basePath}${advancedPath}low_level_animation_widget.dart",
 };
 
 /// preview screen dart File class...
@@ -557,6 +829,11 @@ Widget kGetWidgetClass(String title) {
     return AnimatedContainerExample();
   } else if (title == 'Animation Package') {
     return AnimationsPackageExample();
+  }
+
+  /// Advanced Animation ///
+  else if (title == 'Low Level Animation') {
+    return LowLevelAnimationExample();
   } else {
     return Center(
       child: Text("No Data Found"),

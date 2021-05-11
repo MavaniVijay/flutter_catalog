@@ -79,6 +79,7 @@ class _WidgetScreenState extends State<PreviewWidgetScreen> {
                   ),
                   Text(
                     widget.text,
+                    textAlign: TextAlign.center,
                     style: GoogleFonts.acme(
                       letterSpacing: 2,
                       color: Colors.black38,
