@@ -39,6 +39,12 @@ dependencies:
   extended_image: ^4.1.0
   transparent_image: ^2.0.0
   flutter_gallery_assets: ^1.0.2
+  flutter_slidable: ^0.6.0
+  english_words: ^4.0.0
+  backdrop: ^0.6.1
+  convex_bottom_bar:
+  intl: ^0.17.0
+  animations: ^2.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -58,7 +64,14 @@ flutter:
   assets:
     - assets/images/pngimg/
     - lib/screen/
-    - lib/all_widgets/
+#   /// Basic All Widget ///
+    - lib/all_widgets/widget/
+    - lib/all_widgets/layouts/
+    - lib/all_widgets/list/
+    - lib/all_widgets/appbar/
+    - lib/all_widgets/navigation/
+    - lib/all_widgets/async/
+    - lib/all_widgets/animation/
     - packages/flutter_gallery_assets/animated_images/animated_flutter_stickers.webp
 
   # An image asset can refer to one or more resolution-specific "variants", see
