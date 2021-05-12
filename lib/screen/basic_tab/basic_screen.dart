@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_catalogs/const/color.dart';
-import 'package:flutter_catalogs/const/constant.dart';
 import 'package:flutter_catalogs/controller/basic_tab_controller.dart';
-import 'package:flutter_catalogs/screen/previewWidgetScreen/preview_widget_screen.dart';
-import 'package:flutter_catalogs/service/preview_code.dart';
+import 'package:flutter_catalogs/screen/basic_tab/widget/daskboard_appbar.dart';
+import 'package:flutter_catalogs/screen/basic_tab/widget/search_bar.dart';
+import 'package:flutter_catalogs/screen/basic_tab/widget/searched_list.dart';
 import 'package:flutter_catalogs/service/responsive_service.dart';
-import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
-
-import 'widget/comman_widgets.dart';
+import 'widget/without_search_list.dart';
 
 class BasicScreen extends StatefulWidget {
   @override
@@ -44,7 +40,7 @@ class Desktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        customAppBar(_controller, context),
+        dashBoardAppBar(_controller, context),
         !Responsive.isDesktop() ? searchBar(_controller) : SizedBox(),
         SizedBox(
           height: Get.height * 0.02,
@@ -67,7 +63,7 @@ class TabletOrMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SafeArea(child: customAppBar(_controller, context)),
+        SafeArea(child: dashBoardAppBar(_controller, context)),
         !Responsive.isDesktop() ? searchBar(_controller) : SizedBox(),
         SizedBox(
           height: Get.height * 0.02,
