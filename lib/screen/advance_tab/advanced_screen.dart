@@ -37,7 +37,7 @@ class AdvancedScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return InkResponse(
                     onTap: () {
-                      print("Index ${index}....");
+                      print("Index ${index}");
                       Navigator.push(
                         context,
                         MaterialPageRoute(

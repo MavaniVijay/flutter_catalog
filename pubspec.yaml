@@ -45,6 +45,10 @@ dependencies:
   convex_bottom_bar:
   intl: ^0.17.0
   animations: ^2.0.0
+  lottie: ^1.0.1
+  image_picker: ^0.7.5
+  video_player: ^2.1.1
+  better_player: ^0.0.66
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -63,6 +67,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/pngimg/
+    - assets/images/lottieimg/
+    - assets/music/
     - lib/screen/
 #   /// Basic All Widget ///
     - lib/all_widgets/widget/
