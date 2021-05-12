@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalogs/controller/basic_tab_controller.dart';
+
 import 'package:flutter_catalogs/screen/basic_tab/widget/daskboard_appbar.dart';
 import 'package:flutter_catalogs/screen/basic_tab/widget/search_bar.dart';
 import 'package:flutter_catalogs/screen/basic_tab/widget/searched_list.dart';
