@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
+import 'const/constant.dart';
 import 'screen/splashScreen/splash_screen.dart';
 
 void main() {
@@ -8,13 +9,11 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This screen.basic_tab.widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    print("done push");
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Learn',
+      title: kAppName,
       home: SplashScreen(),
     );
   }

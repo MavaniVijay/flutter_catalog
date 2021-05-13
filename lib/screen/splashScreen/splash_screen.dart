@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_catalogs/const/color.dart';
+import 'package:flutter_catalogs/const/constant.dart';
 import 'package:flutter_catalogs/const/image.dart';
 import 'package:flutter_catalogs/screen/homeScreen/home_screen.dart';
 import 'package:flutter_catalogs/screen/onBoardScreen/on_borading_screen.dart';
@@ -54,7 +55,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 height: Get.height * 0.05,
               ),
               Text(
-                "Flutter Learn",
+                kAppName,
                 style: GoogleFonts.kronaOne(
                   color: ColorPalate.textColor,
                   fontSize: 20,
