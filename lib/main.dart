@@ -11,6 +11,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print("Hello.....World");
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: kAppName,
