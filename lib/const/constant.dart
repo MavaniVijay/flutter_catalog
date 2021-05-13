@@ -4,6 +4,9 @@ import 'package:flutter_catalogs/all_widgets/animation/animated_icon_widget.dart
 import 'package:flutter_catalogs/all_widgets/animation/animation_package_widget.dart';
 import 'package:flutter_catalogs/all_widgets/animation/hero_widget.dart';
 import 'package:flutter_catalogs/all_widgets/animation/opacity_widget.dart';
+import 'package:flutter_catalogs/all_widgets/animationAdvanced/animated_builder_widget.dart';
+import 'package:flutter_catalogs/all_widgets/animationAdvanced/animated_widget.dart';
+import 'package:flutter_catalogs/all_widgets/animationAdvanced/lottie_widget.dart';
 import 'package:flutter_catalogs/all_widgets/animationAdvanced/low_level_animation_widget.dart';
 import 'package:flutter_catalogs/all_widgets/appbar/backdrop_widget.dart';
 import 'package:flutter_catalogs/all_widgets/appbar/basic_appbar_widget.dart';
@@ -28,6 +31,10 @@ import 'package:flutter_catalogs/all_widgets/list/listview_builder_widget.dart';
 import 'package:flutter_catalogs/all_widgets/list/reorderable_list_widget.dart';
 import 'package:flutter_catalogs/all_widgets/list/slidable_list_title_widget.dart';
 import 'package:flutter_catalogs/all_widgets/list/swapie_dismiss_widget.dart';
+import 'package:flutter_catalogs/all_widgets/multiMedia/better_player_widget.dart';
+import 'package:flutter_catalogs/all_widgets/multiMedia/extend_image_widget.dart';
+import 'package:flutter_catalogs/all_widgets/multiMedia/image_picker_widget.dart';
+import 'package:flutter_catalogs/all_widgets/multiMedia/video_player_widget.dart';
 import 'package:flutter_catalogs/all_widgets/navigation/bottom_navigation_widget.dart';
 import 'package:flutter_catalogs/all_widgets/navigation/bottom_sheet_widget.dart';
 import 'package:flutter_catalogs/all_widgets/navigation/bottom_tabbar_widget.dart';
@@ -381,15 +388,27 @@ List<WidgetBoxModel> advancedAnimation = [
 List<WidgetBoxModel> advancedMultiMedia = [
   WidgetBoxModel(
     title: "Image Picker",
-    color: Color(0xff039be5),
+    color: Color(0xff0277bd),
   ),
   WidgetBoxModel(
     title: "Extend Image",
-    color: Color(0xff03a9f4),
+    color: Color(0xff0288d1),
   ),
   WidgetBoxModel(
     title: "Video Player",
+    color: Color(0xff039be5),
+  ),
+  WidgetBoxModel(
+    title: "Better Player",
+    color: Color(0xff03a9f4),
+  ),
+  WidgetBoxModel(
+    title: "Chewie Player",
     color: Color(0xff29b6f6),
+  ),
+  WidgetBoxModel(
+    title: "File Picker",
+    color: Color(0xff4fc3f7),
   ),
 ];
 
@@ -585,6 +604,9 @@ List<String> kCollectionListWidget = [
   "Image Picker",
   "Video Player",
   "Extend Image",
+  "Better Player",
+  "Chewie Player",
+  "File Picker",
   "Shared Preference",
   "Local File Read/Write",
   "SqLite",
@@ -710,9 +732,33 @@ const Map<String, String> kWidgetList = {
   ///////  ***************************************************** /////////
   ///      Advanced Flutter Path ///
 
-  /// Animation Advanced ///
+  /// Animation Advanced Container ///
   'Low Level Animation':
       "${basePath}${advancedPath}low_level_animation_widget.dart",
+  'Animated Widget': "${basePath}${advancedPath}animated_widget.dart",
+  'Animated Builder': "${basePath}${advancedPath}animated_builder_widget.dart",
+  'Lottie': "${basePath}${advancedPath}lottie_widget.dart",
+
+  /// Multi Media Container ///
+  'Image Picker': "${basePath}${multiMediaPath}image_picker_widget.dart",
+  "Video Player": "${basePath}${multiMediaPath}video_player_widget.dart",
+  "Extend Image": "${basePath}${multiMediaPath}extend_image_widget.dart",
+  "Better Player": "${basePath}${multiMediaPath}better_player_widget.dart",
+  "Chewie Player": "${basePath}${multiMediaPath}chewie_player_widget.dart",
+  "File Picker": "${basePath}${multiMediaPath}file_picker_widget.dart",
+
+  /// Animation Advanced ///
+  /// 'Lottie': "${basePath}${}lottie_widget.dart",
+  /// Animation Advanced ///
+  /// 'Lottie': "${basePath}${advancedPath}lottie_widget.dart",
+  /// Animation Advanced ///
+  /// 'Lottie': "${basePath}${advancedPath}lottie_widget.dart",
+  /// Animation Advanced ///
+  /// 'Lottie': "${basePath}${advancedPath}lottie_widget.dart",
+  /// Animation Advanced ///
+  /// 'Lottie': "${basePath}${advancedPath}lottie_widget.dart",
+  /// Animation Advanced ///
+  /// 'Lottie': "${basePath}${advancedPath}lottie_widget.dart",
 };
 
 /// preview screen dart File class...
@@ -837,6 +883,27 @@ Widget kGetWidgetClass(String title) {
   /// Advanced Animation ///
   else if (title == 'Low Level Animation') {
     return LowLevelAnimationExample();
+  } else if (title == 'Animated Widget') {
+    return AnimatedWidgetExample();
+  } else if (title == 'Animated Builder') {
+    return AnimatedBuilderExample();
+  } else if (title == 'Lottie') {
+    return LottieExample();
+  }
+
+  /// Multi Media ///
+  else if (title == 'Image Picker') {
+    return ImagePickerExample();
+  } else if (title == 'Extend Image') {
+    return ExtendedImageExample();
+  } else if (title == 'Video Player') {
+    return VideoPlayerExample();
+  } else if (title == 'Better Player') {
+    return BetterPlayerExample();
+  } else if (title == 'Chewie Player') {
+    return LottieExample();
+  } else if (title == 'File Picker') {
+    return LottieExample();
   } else {
     return Center(
       child: Text("No Data Found"),
