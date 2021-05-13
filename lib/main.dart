@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   // This screen.basic_tab.widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    print("completed");
+    print("done push");
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Learn',
