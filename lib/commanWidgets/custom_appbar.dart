@@ -16,7 +16,7 @@ AppBar customAppBar({
         fontSize: 20,
       ),
     ),
-    elevation: 2,
+    elevation: 0,
     backgroundColor: ColorPalate.appBarColor,
   );
 }

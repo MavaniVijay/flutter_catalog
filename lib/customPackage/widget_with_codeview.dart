@@ -56,6 +56,7 @@ class CustomWidgetWithCodeView extends StatelessWidget {
           color: ColorPalate.appBarColor,
           tabBar: TabBar(
             tabs: _TABS,
+            indicatorColor: Colors.blueGrey,
           ),
         ),
         body: TabBarView(

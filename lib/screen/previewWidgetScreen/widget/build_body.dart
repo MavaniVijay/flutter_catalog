@@ -28,8 +28,7 @@ class BuildBody extends StatelessWidget {
   Widget build(BuildContext context) {
     bool isDesktop = Responsive.isDesktop();
     return Padding(
-      padding: EdgeInsets.only(
-          left: 20, right: kIsWeb ? 0 : 20, top: 10, bottom: 10),
+      padding: EdgeInsets.only(left: 20, top: 10, bottom: 10),
       child: !kIsWeb
           ? buildColumn(context)
           : SingleChildScrollView(
@@ -44,7 +43,7 @@ class BuildBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          margin: EdgeInsets.only(top: 10, right: kIsWeb ? 20 : 0),
+          margin: EdgeInsets.only(top: 10, right: 20),
           height: kIsWeb ? 200 : Get.height * 0.30,
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
@@ -141,14 +140,8 @@ class BuildBody extends StatelessWidget {
       itemBuilder: (context, index) {
         return Padding(
           padding: index == 0
-              ? EdgeInsets.only(
-                  top: 15,
-                  right: 20,
-                )
-              : EdgeInsets.only(
-                  top: 13,
-                  right: 20,
-                ),
+              ? EdgeInsets.only(top: 15, right: 20)
+              : EdgeInsets.only(top: 13, right: 20),
           child: InkResponse(
             onTap: () {
               print("Icon Check....");

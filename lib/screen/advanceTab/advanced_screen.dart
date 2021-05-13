@@ -11,6 +11,7 @@ class AdvancedScreen extends StatelessWidget {
     return Responsive(
       desktop: Desktop(),
       tablet: TabletOrMobile(),
+      mobile: TabletOrMobile(),
     );
   }
 }
