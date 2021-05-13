@@ -44,7 +44,6 @@ class AdvancedScreen extends StatelessWidget {
                             builder: (context) => PreviewWidgetScreen(
                                 title: advancedContainerList[index].title,
                                 color: advancedContainerList[index].color,
-                                text: advancedContainerList[index].title,
                                 icon: Icon(advancedContainerList[index].icon),
                                 widgetBoxModel:
                                     advancedContainerList[index].listWidget)),
