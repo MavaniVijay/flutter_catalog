@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_catalogs/screen/basic_tab/widget/search_bar.dart';
+import 'package:flutter_catalogs/const/constant.dart';
+import 'package:flutter_catalogs/screen/basicTab/widget/search_bar.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,7 +8,6 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../const/color.dart';
 import '../../../controller/basic_tab_controller.dart';
 import '../../../service/responsive_service.dart';
-import 'without_search_list.dart';
 
 Container dashBoardAppBar(BasicTabController con, BuildContext context) {
   return Container(
@@ -20,10 +20,10 @@ Container dashBoardAppBar(BasicTabController con, BuildContext context) {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          'Flutter Learn',
+          kAppName,
           style: GoogleFonts.acme(
             letterSpacing: 2,
-            color: Colors.black,
+            color: Colors.white,
             fontSize: 20,
           ),
         ),

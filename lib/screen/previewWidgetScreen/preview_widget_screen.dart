@@ -18,18 +18,13 @@ class PreviewWidgetScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async {
-        return Future.value(true);
-      },
-      child: Scaffold(
-        appBar: customAppBar(title: title),
-        body: BuildBody(
-          color: color,
-          title: title,
-          icon: icon,
-          widgetBoxModel: widgetBoxModel,
-        ),
+    return Scaffold(
+      appBar: customAppBar(title: title),
+      body: BuildBody(
+        color: color,
+        title: title,
+        icon: icon,
+        widgetBoxModel: widgetBoxModel,
       ),
     );
   }

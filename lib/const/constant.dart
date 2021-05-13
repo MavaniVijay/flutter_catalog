@@ -52,6 +52,9 @@ import 'package:flutter_catalogs/all_widgets/widget/textformfiled_widget.dart';
 import 'package:flutter_catalogs/model/homeCardModel.dart';
 import 'package:flutter_catalogs/model/widgetBoxModel.dart';
 
+///App name...
+const String kAppName = 'Flutter Learn';
+
 /// screen size...
 const double kTabletSize = 1000;
 const double kMobileSize = 550;

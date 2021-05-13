@@ -55,7 +55,7 @@ class Desktop extends StatelessWidget {
             child: CustomWidgetWithCodeView(
               sourceFilePath: widgetPath,
               child: widget,
-              fontSize: 25,
+              // fontSize: 25,
             ),
           ),
         ],

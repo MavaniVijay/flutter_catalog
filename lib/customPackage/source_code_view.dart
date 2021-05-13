@@ -56,20 +56,20 @@ class _SourceCodeViewState extends State<SourceCodeView> {
     );
   }
 
-  List<Widget> _buildFloatingButtons() {
+  List<Widget> _buildFloatingButtons({String code}) {
     return <Widget>[
-      if (this.widget.codeLink != null)
-        FloatingActionButton(
-          heroTag: null,
-          child: Icon(Icons.content_copy),
-          tooltip: 'Copy code link to clipboard',
-          onPressed: () {
-            Clipboard.setData(ClipboardData(text: this.widget.codeLink));
-            Scaffold.of(context).showSnackBar(SnackBar(
-              content: Text('Code link copied to clipboard!'),
-            ));
-          },
-        ),
+      //if (this.widget.codeLink != null)
+      FloatingActionButton(
+        heroTag: null,
+        child: Icon(Icons.content_copy),
+        tooltip: 'Copy code link to clipboard',
+        onPressed: () {
+          Clipboard.setData(ClipboardData(text: code));
+          Scaffold.of(context).showSnackBar(SnackBar(
+            content: Text('Code link copied to clipboard!'),
+          ));
+        },
+      ),
       if (this.widget.codeLink != null)
         FloatingActionButton(
           heroTag: null,
@@ -109,7 +109,7 @@ class _SourceCodeViewState extends State<SourceCodeView> {
               child: _getCodeView(snapshot.data, context),
             ),
             floatingActionButton: AnimatedFloatingActionButton(
-              fabButtons: _buildFloatingButtons(),
+              fabButtons: _buildFloatingButtons(code: snapshot.data),
               colorStartAnimation: Colors.blue,
               colorEndAnimation: Colors.red,
               animatedIconData: AnimatedIcons.menu_close,

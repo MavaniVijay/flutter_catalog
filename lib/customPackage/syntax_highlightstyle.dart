@@ -135,6 +135,7 @@ class DartSyntaxHighlighter extends SyntaxHighlighter {
     if (_generateSpans()) {
       // Successfully parsed the code
       final List<TextSpan> formattedText = <TextSpan>[];
+
       int currentPosition = 0;
 
       for (_HighlightSpan span in _spans) {
@@ -144,7 +145,6 @@ class DartSyntaxHighlighter extends SyntaxHighlighter {
 
         formattedText.add(TextSpan(
             style: span.textStyle(_style), text: span.textForSpan(_src)));
-
         currentPosition = span.end;
       }
 
@@ -332,6 +332,7 @@ enum _HighlightType {
 
 class _HighlightSpan {
   _HighlightSpan(this.type, this.start, this.end);
+
   final _HighlightType type;
   final int start;
   final int end;

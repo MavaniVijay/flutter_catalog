@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalogs/controller/basic_tab_controller.dart';
+import 'package:flutter_catalogs/screen/basicTab/widget/daskboard_appbar.dart';
+import 'package:flutter_catalogs/screen/basicTab/widget/search_bar.dart';
+import 'package:flutter_catalogs/screen/basicTab/widget/searched_list.dart';
 
-import 'package:flutter_catalogs/screen/basic_tab/widget/daskboard_appbar.dart';
-import 'package:flutter_catalogs/screen/basic_tab/widget/search_bar.dart';
-import 'package:flutter_catalogs/screen/basic_tab/widget/searched_list.dart';
 import 'package:flutter_catalogs/service/responsive_service.dart';
 import 'package:get/get.dart';
 import 'widget/without_search_list.dart';
