@@ -1,13 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_catalogs/const/color.dart';
 import 'package:flutter_catalogs/const/constant.dart';
-import 'package:flutter_catalogs/controller/basic_tab_controller.dart';
 import 'package:flutter_catalogs/screen/previewWidgetScreen/preview_widget_screen.dart';
-import 'package:flutter_catalogs/service/preview_code.dart';
 import 'package:flutter_catalogs/service/responsive_service.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 

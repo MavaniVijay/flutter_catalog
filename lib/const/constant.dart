@@ -17,6 +17,18 @@ import 'package:flutter_catalogs/all_widgets/appbar/silver_appbar_widget.dart';
 import 'package:flutter_catalogs/all_widgets/async/future_builder_widget.dart';
 import 'package:flutter_catalogs/all_widgets/async/stream_builder_widget.dart';
 import 'package:flutter_catalogs/all_widgets/async/stream_controller_widget.dart';
+import 'package:flutter_catalogs/all_widgets/chart/bar_chart_widget.dart';
+import 'package:flutter_catalogs/all_widgets/chart/graphview_chart_widget.dart';
+import 'package:flutter_catalogs/all_widgets/chart/heatmap_chart_widget.dart';
+import 'package:flutter_catalogs/all_widgets/chart/line_chart_widget.dart';
+import 'package:flutter_catalogs/all_widgets/chart/pie_chart_fl_widget.dart';
+import 'package:flutter_catalogs/all_widgets/chart/pie_chart_widget.dart';
+import 'package:flutter_catalogs/all_widgets/chart/radar_chart_widget.dart';
+import 'package:flutter_catalogs/all_widgets/chart/time_series_widget.dart';
+import 'package:flutter_catalogs/all_widgets/firebase/chat_room_widget.dart';
+import 'package:flutter_catalogs/all_widgets/firebase/fire_base_login_widget.dart';
+import 'package:flutter_catalogs/all_widgets/firebase/fire_base_mlkit_widget.dart';
+import 'package:flutter_catalogs/all_widgets/firebase/fire_base_voting_widget.dart';
 import 'package:flutter_catalogs/all_widgets/layouts/container_widget.dart';
 import 'package:flutter_catalogs/all_widgets/layouts/expanded_box_widget.dart';
 import 'package:flutter_catalogs/all_widgets/layouts/fractionally_widget.dart';
@@ -31,8 +43,9 @@ import 'package:flutter_catalogs/all_widgets/list/listview_builder_widget.dart';
 import 'package:flutter_catalogs/all_widgets/list/reorderable_list_widget.dart';
 import 'package:flutter_catalogs/all_widgets/list/slidable_list_title_widget.dart';
 import 'package:flutter_catalogs/all_widgets/list/swapie_dismiss_widget.dart';
-import 'package:flutter_catalogs/all_widgets/multiMedia/better_player_widget.dart';
+import 'package:flutter_catalogs/all_widgets/multiMedia/chewie_player_widget.dart';
 import 'package:flutter_catalogs/all_widgets/multiMedia/extend_image_widget.dart';
+import 'package:flutter_catalogs/all_widgets/multiMedia/file_picker_widget.dart';
 import 'package:flutter_catalogs/all_widgets/multiMedia/image_picker_widget.dart';
 import 'package:flutter_catalogs/all_widgets/multiMedia/video_player_widget.dart';
 import 'package:flutter_catalogs/all_widgets/navigation/bottom_navigation_widget.dart';
@@ -44,6 +57,22 @@ import 'package:flutter_catalogs/all_widgets/navigation/navigation_drawer_widget
 import 'package:flutter_catalogs/all_widgets/navigation/page_selector_widget.dart';
 import 'package:flutter_catalogs/all_widgets/navigation/routes_widget.dart';
 import 'package:flutter_catalogs/all_widgets/navigation/tab_widget.dart';
+import 'package:flutter_catalogs/all_widgets/networking/fetching_widget.dart';
+import 'package:flutter_catalogs/all_widgets/networking/google_book_widget.dart';
+import 'package:flutter_catalogs/all_widgets/networking/hacker_data.dart';
+import 'package:flutter_catalogs/all_widgets/networking/sending_data_widget.dart';
+import 'package:flutter_catalogs/all_widgets/persistence/local_flile_widget.dart';
+import 'package:flutter_catalogs/all_widgets/persistence/sembast_widget.dart';
+import 'package:flutter_catalogs/all_widgets/persistence/shared_pref_widget.dart';
+import 'package:flutter_catalogs/all_widgets/persistence/sqlite_widget.dart';
+import 'package:flutter_catalogs/all_widgets/plugins/feature_disc_widget.dart';
+import 'package:flutter_catalogs/all_widgets/plugins/local_auth_widget.dart';
+import 'package:flutter_catalogs/all_widgets/plugins/mark_down_widget.dart';
+import 'package:flutter_catalogs/all_widgets/stateManagement/get_x_widget.dart';
+import 'package:flutter_catalogs/all_widgets/stateManagement/inherited_widget.dart';
+import 'package:flutter_catalogs/all_widgets/stateManagement/provider_widget.dart';
+import 'package:flutter_catalogs/all_widgets/stateManagement/scoped_mode_widget.dart';
+import 'package:flutter_catalogs/all_widgets/stateManagement/vanila_bloc_widget.dart';
 import 'package:flutter_catalogs/all_widgets/widget/button_widget.dart';
 import 'package:flutter_catalogs/all_widgets/widget/card_response_widget.dart';
 import 'package:flutter_catalogs/all_widgets/widget/dropdown_menu_widget.dart';
@@ -399,10 +428,6 @@ List<WidgetBoxModel> advancedMultiMedia = [
     color: Color(0xff039be5),
   ),
   WidgetBoxModel(
-    title: "Better Player",
-    color: Color(0xff03a9f4),
-  ),
-  WidgetBoxModel(
     title: "Chewie Player",
     color: Color(0xff29b6f6),
   ),
@@ -429,10 +454,6 @@ List<WidgetBoxModel> advancedPersistence = [
     title: "SemBast",
     color: Color(0xffb39ddb),
   ),
-  WidgetBoxModel(
-    title: "Hive",
-    color: Color(0xffd1c4e9),
-  ),
 ];
 
 List<WidgetBoxModel> advancedStateManagement = [
@@ -449,7 +470,7 @@ List<WidgetBoxModel> advancedStateManagement = [
     color: Color(0xff00897b),
   ),
   WidgetBoxModel(
-    title: "Flutter BLoC",
+    title: "Get x",
     color: Color(0xff009688),
   ),
   WidgetBoxModel(
@@ -460,7 +481,7 @@ List<WidgetBoxModel> advancedStateManagement = [
 
 List<WidgetBoxModel> advancedPlugins = [
   WidgetBoxModel(
-    title: "Web View",
+    title: "Feature Disc",
     color: Color(0xff558b2f),
   ),
   WidgetBoxModel(
@@ -604,20 +625,18 @@ List<String> kCollectionListWidget = [
   "Image Picker",
   "Video Player",
   "Extend Image",
-  "Better Player",
   "Chewie Player",
   "File Picker",
   "Shared Preference",
   "Local File Read/Write",
   "SqLite",
   "SemBast",
-  "Hive",
   "Inherited Widget",
   "Scoped Mode",
   "Vanilla BLoC Pattern",
-  "Flutter BLoC",
+  "Get x",
   "Provider",
-  "Web View",
+  "Feature Disc",
   "Mark Down Rendering",
   "Local Auth",
   "Time Series Chart",
@@ -743,22 +762,51 @@ const Map<String, String> kWidgetList = {
   'Image Picker': "${basePath}${multiMediaPath}image_picker_widget.dart",
   "Video Player": "${basePath}${multiMediaPath}video_player_widget.dart",
   "Extend Image": "${basePath}${multiMediaPath}extend_image_widget.dart",
-  "Better Player": "${basePath}${multiMediaPath}better_player_widget.dart",
   "Chewie Player": "${basePath}${multiMediaPath}chewie_player_widget.dart",
   "File Picker": "${basePath}${multiMediaPath}file_picker_widget.dart",
 
-  /// Animation Advanced ///
-  /// 'Lottie': "${basePath}${}lottie_widget.dart",
-  /// Animation Advanced ///
-  /// 'Lottie': "${basePath}${advancedPath}lottie_widget.dart",
-  /// Animation Advanced ///
-  /// 'Lottie': "${basePath}${advancedPath}lottie_widget.dart",
-  /// Animation Advanced ///
-  /// 'Lottie': "${basePath}${advancedPath}lottie_widget.dart",
-  /// Animation Advanced ///
-  /// 'Lottie': "${basePath}${advancedPath}lottie_widget.dart",
-  /// Animation Advanced ///
-  /// 'Lottie': "${basePath}${advancedPath}lottie_widget.dart",
+  /// Persistence Container ///
+  'Shared Preference': "${basePath}${persistencePath}shared_pref_widget.dart",
+  'Local File Read/Write':
+      "${basePath}${persistencePath}local_flile_widget.dart",
+  'SqLite': "${basePath}${persistencePath}sqlite_widget.dart",
+  'SemBast': "${basePath}${persistencePath}sembast_widget.dart",
+
+  /// State Management ///
+  'Inherited Widget': "${basePath}${stateManagePath}inherited_widget.dart",
+  'Scoped Mode': "${basePath}${stateManagePath}scoped_mode_widget.dart",
+  'Vanilla BLoC Pattern':
+      "${basePath}${stateManagePath}vanila_bloc_widget.dart",
+  'Get x': "${basePath}${stateManagePath}get_x_widget.dart",
+  'Provider': "${basePath}${stateManagePath}provider_widget.dart",
+
+  /// Plugins Provider ///
+  'Feature Disc': "${basePath}${pluginsPath}feature_disc_widget.dart",
+  'Mark Down Rendering': "${basePath}${pluginsPath}mark_down_widget.dart",
+  'Local Auth': "${basePath}${pluginsPath}local_auth_widget.dart",
+
+  /// Chart Container ///
+  'Time Series Chart': "${basePath}${chartPath}time_series_widget.dart",
+  'Pie Chart': "${basePath}${chartPath}pie_chart_widget.dart",
+  'Line Chart': "${basePath}${chartPath}line_chart_widget.dart",
+  'Bar Chat': "${basePath}${chartPath}bar_chart_widget.dart",
+  'Pie Chart With Fl Chart': "${basePath}${chartPath}pie_chart_fl_widget.dart",
+  'GraphView': "${basePath}${chartPath}graphview_chart_widget.dart",
+  'HetMap Calender': "${basePath}${chartPath}heatmap_chart_widget.dart",
+  'Radar Chart': "${basePath}${chartPath}radar_chart_widget.dart",
+
+  /// HTTP Networking Container ///
+  'Fetching Data': "${basePath}${networkingPath}fetching_widget.dart",
+  'Sending Data': "${basePath}${networkingPath}sending_data_widget.dart",
+  'Hacker News': "${basePath}${networkingPath}hacker_data.dart",
+  'Google Books': "${basePath}${networkingPath}google_book_widget.dart",
+
+  /// Firebase Container ///
+  'Firebase Login': "${basePath}${fireBasePath}fire_base_login_widget.dart",
+  'FireStore Voting App':
+      "${basePath}${fireBasePath}fire_base_voting_widget.dart",
+  'Chat Room': "${basePath}${fireBasePath}chat_room_widget.dart",
+  'FireBase ML Kit': "${basePath}${fireBasePath}fire_base_mlkit_widget.dart",
 };
 
 /// preview screen dart File class...
@@ -898,12 +946,84 @@ Widget kGetWidgetClass(String title) {
     return ExtendedImageExample();
   } else if (title == 'Video Player') {
     return VideoPlayerExample();
-  } else if (title == 'Better Player') {
-    return BetterPlayerExample();
   } else if (title == 'Chewie Player') {
-    return LottieExample();
+    return ChewieExample();
   } else if (title == 'File Picker') {
-    return LottieExample();
+    return FilePickerExample();
+  }
+
+  /// Persistence Container ///
+  else if (title == 'Shared Preference') {
+    return SharedPreferenceExample();
+  } else if (title == 'Local File Read/Write') {
+    return FileReadWriteExample();
+  } else if (title == 'SqLite') {
+    return SqliteExample();
+  } else if (title == 'SemBast') {
+    return SembastExample();
+  }
+
+  /// State Management Container ///
+  else if (title == 'Inherited Widget') {
+    return InheritedWidgetExample();
+  } else if (title == 'Scoped Mode') {
+    return ScopedModelExample();
+  } else if (title == 'Vanilla BLoC Pattern') {
+    return VanilaBlocExample();
+  } else if (title == 'Get x') {
+    return GetxExample();
+  } else if (title == 'Provider') {
+    return ProviderExample();
+  }
+
+  /// Plugin Container  ///
+  else if (title == 'Feature Disc') {
+    return FeatureDiscoveryExample();
+  } else if (title == 'Mark Down Rendering') {
+    return MarkdownExample();
+  } else if (title == 'Local Auth') {
+    return LocalAuthExample();
+  }
+
+  /// Chart Container ///
+  else if (title == 'Time Series Chart') {
+    return TimeseriesChartExample();
+  } else if (title == 'Pie Chart') {
+    return PieChartExample();
+  } else if (title == 'Line Chart') {
+    return FlLineChartExample();
+  } else if (title == 'Bar Chat') {
+    return FlBarChartExample();
+  } else if (title == 'Pie Chart With Fl Chart') {
+    return FlPieChartExample();
+  } else if (title == 'GraphView') {
+    return GraphViewExample();
+  } else if (title == 'HetMap Calender') {
+    return HeatmapCalendarExample();
+  } else if (title == 'Radar Chart') {
+    return RadarChartExample();
+  }
+
+  /// Networking Container ///
+  else if (title == 'Fetching Data') {
+    return RestApiFetchExample();
+  } else if (title == 'Sending Data') {
+    return RestApiSendExample();
+  } else if (title == 'Hacker News') {
+    return RestApiHackerNewsExample();
+  } else if (title == 'Google Books') {
+    return RestApiGoogleBooksExample();
+  }
+
+  /// firebase Container ///
+  else if (title == 'Firebase Login') {
+    return FirebaseLoginExample();
+  } else if (title == 'FireStore Voting App') {
+    return FirebaseVoteExample();
+  } else if (title == 'Chat Room') {
+    return FirebaseChatroomExample();
+  } else if (title == 'FireBase ML Kit') {
+    return FirebaseMLKitExample();
   } else {
     return Center(
       child: Text("No Data Found"),
