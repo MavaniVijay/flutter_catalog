@@ -17,6 +17,7 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print("Pending.... Favourite Screen");
     return GetMaterialApp(
       // initialRoute: '/home',
       defaultTransition: Transition.native,
