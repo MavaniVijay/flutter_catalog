@@ -1,11 +1,8 @@
 import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_catalogs/const/color.dart';
 import 'package:flutter_catalogs/screen/aboutTab/about_screen.dart';
 import 'package:flutter_catalogs/screen/advanceTab/advanced_screen.dart';
 import 'package:flutter_catalogs/screen/basicTab/basic_screen.dart';
-import 'package:flutter_switch/flutter_switch.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -29,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
         tabs: [
           TabData(
             iconData: Icons.list_alt_outlined,
-            title: "Basic",
+            title: "Basics",
           ),
           TabData(
               iconData: Icons.featured_play_list_outlined, title: "Advanced"),

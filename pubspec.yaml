@@ -15,7 +15,8 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.0+1
+version: 1.0.0+2
+
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -29,7 +30,6 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   google_fonts: ^2.0.0
-  get:
   flutter_switch: ^0.3.1
   fancy_bottom_navigation: ^0.3.3
 #  widget_with_codeview:
@@ -47,11 +47,49 @@ dependencies:
   animations: ^2.0.0
   url_launcher: ^6.0.3
   flutter_staggered_animations: ^1.0.0
+
+  # MediaPlayer.....
   image_picker: ^0.7.5
   video_player: ^2.1.1
-  better_player: ^0.0.66
   lottie: ^1.0.1
-#  chewie: 1.0.0
+  chewie:
+  file_picker: ^3.0.1
+
+  # Persistence......
+  shared_preferences: ^2.0.5
+  sembast: ^3.0.2
+
+  # state Management...
+  scoped_model: ^1.1.0
+  get: ^4.1.4
+  provider: ^5.0.0
+
+  # Plugin....
+  feature_discovery: ^0.14.0
+  flutter_markdown: ^0.6.2
+  syntax_highlighter: ^0.1.1
+  local_auth: ^1.1.5
+
+  # Charts......
+  charts_flutter: ^0.10.0
+  fl_chart: ^0.36.1
+  tuple: ^2.0.0
+  graphview: ^0.7.0
+  heatmap_calendar: ^1.2.8
+  flutter_radar_chart: ^0.2.0
+
+  # Http Networking.....
+  flutter_webview_plugin: ^0.3.11
+
+  # FireBase...
+  firebase_auth: ^1.1.4
+  firebase_core: ^1.1.1
+  firebase_analytics: ^8.0.4
+  google_sign_in:
+  cloud_firestore: ^2.2.0
+  firebase_database: ^6.1.2
+  firebase_ml_vision: ^0.9.7
+  package_info: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -59,7 +97,6 @@ dev_dependencies:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
 # The following section is specific to Flutter.
 flutter:
 
